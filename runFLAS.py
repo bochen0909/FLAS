@@ -251,8 +251,8 @@ if start_from_step <= 2:
 
 ##########################################
 
-	FLAS2_command = 'FLAS 2 '+ str(FN1) +  ' -c ' + temp_dir + '/step2/' + 'clique2.txt ' + ' -e ' + temp_dir + '/step2/' + 'edge2.txt ' + ' -r ' + temp_dir + '/step1/' + 'allreads0_corrected_filted1.fasta ' + ' -m ' + temp_dir + '/step2/' +'allreads0_corrected_filted1.fasta.m4 ' + ' -de2 ' + temp_dir + '/step2/' +'deletepairs2.txt ' + ' -de3 ' + temp_dir + '/step2/' + 'deletepairs3.txt '+ ' -w ' + temp_dir + '/step2/' + 'cor_incor.fasta ' + ' -g ' + temp_dir + '/step2/' + 'cor_incor.fasta.m4 ' +'-C ' + str(args.c)  +'-a1 '+str(args.a1)+' -a2 '+str(args.a2)+' -b1 '+str(args.b1)+' -b2 '+str(args.b2)
-	print ('Running command: ' + FLAS2_command)
+	FLAS2_command = 'FLAS 2 '+ str(FN1) +  ' -c ' + temp_dir + '/step2/' + 'clique2.txt ' + ' -e ' + temp_dir + '/step2/' + 'edge2.txt ' + ' -r ' + temp_dir + '/step1/' + 'allreads0_corrected_filted1.fasta ' + ' -m ' + temp_dir + '/step2/' +'allreads0_corrected_filted1.fasta.m4 ' + ' -de2 ' + temp_dir + '/step2/' +'deletepairs2.txt ' + ' -de3 ' + temp_dir + '/step2/' + 'deletepairs3.txt '+ ' -w ' + temp_dir + '/step2/' + 'cor_incor.fasta ' + ' -g ' + temp_dir + '/step2/' + 'cor_incor.fasta.m4 ' +'-C ' + str(args.c)  +' -f1 '+str(args.a1)+' -f2 '+str(args.a2)+' -d1 '+str(args.b1)+' -d2 '+str(args.b2)
+	print ('Running command: "' + FLAS2_command+'"')
 	err = os.system(FLAS2_command)
 	if err != 0:
 		print ('ERROR: ' + 'Failed to run FLAS2:' + os.strerror(err))
